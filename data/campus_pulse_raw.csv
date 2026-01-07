@@ -1,0 +1,46 @@
+Student_ID,Department,Year,Facility,Rating,Feedback_Date
+101,CSE,1,Library,1,2024-01-10
+102,MECH,1,Cafeteria,3,2024-01-17
+103,ECE,4,Hostel,4,2024-02-22
+104,EEE,3,Sports Centre,2,2024-03-16
+105,CIVIL,2,Cafeteria,5,2024-03-24
+106,CSE,2,Library,3,2024-04-24
+107,ECE,3,Wi-Fi,2,2024-04-27
+108,CIVIL,1,Library,4,2024-05-29
+109,MECH,4,Wi-Fi,1,2024-06-20
+110,CSE,2,Sports Centre,4,2024-06-26
+111,CSE,1,Library,5,2024-07-16
+112,MECH,4,Sports Centre,5,2024-08-12
+
+
+
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# ============================
+# PYTHON VISUALIZATION
+# ============================
+
+# Average Satisfaction by Facility
+avg_facility = df_cleaned.groupby('Facility')['Rating'].mean().reset_index()
+
+plt.figure(figsize=(8, 5))
+sns.barplot(data=avg_facility, x='Facility', y='Rating', palette='Blues_d')
+plt.title("Average Satisfaction Rating by Facility")
+plt.xlabel("Facility")
+plt.ylabel("Average Rating")
+plt.xticks(rotation=30)
+plt.tight_layout()
+plt.show()
+
+# Average Satisfaction by Department
+avg_department = df_cleaned.groupby('Department')['Rating'].mean().reset_index()
+
+plt.figure(figsize=(8, 5))
+sns.barplot(data=avg_department, x='Department', y='Rating', palette='Greens_d')
+plt.title("Average Satisfaction Rating by Department")
+plt.xlabel("Department")
+plt.ylabel("Average Rating")
+plt.tight_layout()
+plt.show()
