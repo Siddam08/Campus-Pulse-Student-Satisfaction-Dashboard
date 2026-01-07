@@ -17,6 +17,7 @@ The objective of this project is to transform raw student feedback data into mea
 - Visual Studio Code (VS Code)
 - CSV Dataset
 - Google Looker Studio
+- Git & Github
 
 ---
 
