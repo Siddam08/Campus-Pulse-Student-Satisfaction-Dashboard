@@ -18,7 +18,7 @@ The system enables real-time filtering, visualization, and insights generation t
 
 ## 🚀 Features
 
-* 🔐 Secure Login System (Admin & User roles)
+* 🔐 Secure Login System
 * 📊 Interactive Dashboard using Streamlit
 * 🔎 Dynamic Filters (Department, Year, Facility)
 * 📈 Visualizations (Bar Chart, Pie Chart, Line Chart, Box Plot)
